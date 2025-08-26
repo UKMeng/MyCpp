@@ -1,6 +1,10 @@
 #include <iostream>
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+#include "src/MyString.h"
+
+int main()
+{
+    MyCpp::MyString str("Hello World!");
+    std::cout << str << std::endl;
     return 0;
 }
