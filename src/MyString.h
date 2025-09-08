@@ -27,6 +27,11 @@ namespace MyCpp
 
         const char* Cstr() const;
 
+        char& operator[](size_t index);
+        const char& operator[](size_t index) const;
+
+        MyString& operator+=(const MyString& other);
+
     private:
         char* m_data;
         size_t m_size;

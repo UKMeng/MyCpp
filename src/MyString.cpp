@@ -84,9 +84,7 @@ namespace MyCpp
 
         return *this;
     }
-
-
-
+    
     size_t MyString::Size() const
     {
         return m_size;
@@ -106,6 +104,18 @@ namespace MyCpp
     {
         return m_data;
     }
+
+    char& MyString::operator[](size_t index)
+    {
+        return m_data[index];
+    }
+
+    const char& MyString::operator[](size_t index) const
+    {
+        return m_data[index];
+    }
+
+
 
     std::ostream& operator<<(std::ostream& os, const MyString& str)
     {
